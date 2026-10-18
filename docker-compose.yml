@@ -2,9 +2,8 @@
 services:
   app:
     build: .
-    container_name: praktikum-flask-db
     ports:
-      - "5001:5000"
+      - "5002:5000"
     environment:
       DB_HOST: db
       DB_USER: appuser
@@ -16,7 +15,6 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: praktikum-mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: praktikum_db
